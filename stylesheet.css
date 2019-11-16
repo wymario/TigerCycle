@@ -1,1 +1,22 @@
-
+h1 {
+  font-family: "Verdana", serif;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  float: right;
+}
+li a {
+  background-color: #f4770f;
+  color: white;
+  display: block;
+  font-family: "Verdana", serif;
+  padding: 12px;
+  text-decoration: none;
+}
+p {
+  font-family: "Verdana", serif;
+}
