@@ -1,16 +1,21 @@
+header {
+  font-family: "Verdana", serif;
+  text-align: center;
+}
 h1 {
   font-family: "Verdana", serif;
 }
 ul {
-  list-style-type: none;
+  background-color: #f4770f;
+  list-style-type: none;        
   margin: 0;
+  overflow: hidden;
   padding: 0;
 }
 li {
-  float: right;
+  float: left;
 }
 li a {
-  background-color: #f4770f;
   color: white;
   display: block;
   font-family: "Verdana", serif;
