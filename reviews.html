@@ -1,9 +1,15 @@
-  
 <!doctype html>
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <title>Reviews</title>
+  <style>
+  table, th, td {
+  border: 3px solid orange;
+  border-collapse: collapse;
+  padding: 25px;
+}
+</style>
 </head>
   
 <header>
@@ -20,6 +26,41 @@
     <li><a href="https://wymario.github.io/TigerCycle/login.html">Login</a></li>
   </ul>
   
-  <p1>This is the reviews page</p1>
+  <center>
+  <h1> The Machine Reviews </h1>
+  <br>
+  <p> Here, you can write reviews on the machines ability to either wash your clothes correctly or dry them right. </p>
+  <br>
+  <table style="width:100%" style="color:Orange;">
+  <tr>
+    <th>Room</th>
+    <th>Machine</th> 
+    <th>Review</th>
+  </tr>
+  <tr>
+      <th>  
+    	<select name="Rooms">
+    	  <option value="Sol">Sol</option>
+    	  <option value="Gleason">Gleason</option>
+    	  <option value="Ellingson">Ellingson</option>
+    	  <option value="Peterson">Peterson</option>
+    	</select>
+      </th>
+      <td>    
+    	<form name="Rooms">
+    	  <input type="radio" name="Washer" value="Washer">Washer<br>
+		  <input type="radio" name="Dryer" value="Dryer">Dryer<br>    	  
+    	</form>
+      </td>
+    <th>
+       User Review:<br>
+  	   <input type="paragraph" name="review" >
+  	    <br/>
+
+        
+    </th>
+  </tr>
+  </table>
+  
 </body>
 </html>
