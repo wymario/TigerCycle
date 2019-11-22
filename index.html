@@ -55,7 +55,7 @@
   <tr>
       <td>    
     	<form name="Buttons">
-    	  <button  type="button" onclick="alert('Use Washing Machine100000')">Use Washer</button>
+    	  <button  type="button" onclick="removeWasherGle()">Use Washer</button>
 		    <button  type="button" onclick="alert('Use Drying Machine')">Use Dryer</button>
         <button  type="button" onclick="addWasherGle()">Done With Washer</button>
 		    <button  type="button" onclick="alert('Done With Drying Machine')">Done With Dryer</button>
@@ -63,25 +63,25 @@
       </td>
 	  <td>    
     	<form name="Buttons">
-    	  <button  type="button" onclick="alert('Use Washing Machine')">Use Washer</button>
+    	  <button  type="button" onclick="removeWasherSol()">Use Washer</button>
 		    <button  type="button" onclick="alert('Use Drying Machine')">Use Dryer</button>
-        <button  type="button" onclick="alert('Done With Washing Machine')">Done With Washer</button>
+        <button  type="button" onclick="addWasherSol()">Done With Washer</button>
 		    <button  type="button" onclick="alert('Done With Drying Machine')">Done With Dryer</button>
     	</form>
       </td>
 	  <td>    
     	<form name="Buttons">
-    	  <button  type="button" onclick="alert('Use Washing Machine')">Use Washer</button>
+    	  <button  type="button" onclick="removeWasherEll()">Use Washer</button>
 		    <button  type="button" onclick="alert('Use Drying Machine')">Use Dryer</button>
-        <button  type="button" onclick="alert('Done With Washing Machine')">Done With Washer</button>
+        <button  type="button" onclick="addWasherEll()">Done With Washer</button>
 		    <button  type="button" onclick="alert('Done With Drying Machine')">Done With Dryer</button>
     	</form>
       </td>
       <td>    
     	<form name="Buttons">
-    	  <button  type="button" onclick="alert('Use Washing Machine')">Use Washer</button>
+    	  <button  type="button" onclick="useWasherPet()">Use Washer</button>
 		    <button  type="button" onclick="alert('Use Drying Machine')">Use Dryer</button>
-        <button  type="button" onclick="alert('Done With Washing Machine')">Done With Washer</button>
+        <button  type="button" onclick="addWasherPet()">Done With Washer</button>
 		    <button  type="button" onclick="alert('Done With Drying Machine')">Done With Dryer</button>
     	</form>
       </td>
@@ -92,7 +92,42 @@
 		 var count = document.getElementById('Gleason Washers').innerHTML;
 		 count++;
 		 document.getElementById('Gleason Washers').innerHTML = count;
-	  }	  
+	  }	
+	  function addWasherSol(){
+		 var count = document.getElementById('Sol Washers').innerHTML;
+		 count++;
+		 document.getElementById('Sol Washers').innerHTML = count;
+	  }
+	  function addWasherEll(){
+		 var count = document.getElementById('Ellingson Washers').innerHTML;
+		 count++;
+		 document.getElementById('Ellingson Washers').innerHTML = count;
+	  }
+	  function addWasherPet(){
+		 var count = document.getElementById('Peterson Washers').innerHTML;
+		 count++;
+		 document.getElementById('Peterson Washers').innerHTML = count;
+	  }
+	  function removeWasherGle(){
+		 var count = document.getElementById('Gleason Washers').innerHTML;
+		 count--;
+		 document.getElementById('Gleason Washers').innerHTML = count;
+	  }
+	  function removeWasherSol(){
+		 var count = document.getElementById('Sol Washers').innerHTML;
+		 count--;
+		 document.getElementById('Sol Washers').innerHTML = count;
+	  }
+	  function removeWasherEll(){
+		 var count = document.getElementById('Ellingson Washers').innerHTML;
+		 count--;
+		 document.getElementById('Ellingson Washers').innerHTML = count;
+	  }
+	  function removeWasherPet(){
+		 var count = document.getElementById('Peterson Washers').innerHTML;
+		 count--;
+		 document.getElementById('Peterson Washers').innerHTML = count;
+	  }
   </script>
   
 </body>
