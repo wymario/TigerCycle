@@ -36,20 +36,20 @@
   </tr>
   <tr>
 	  <td>
-	  	  <p1>30</p1>
-		  <p1>10</p1>
+	  	  <p1><span id="Gleason Washers">30</span></p1>
+		  <p1><span id="Gleason Dryers">10</span></p1>
 	  	  </td>
 	  <td>
-		  <p1>31</p1>
-		  <p1>11</p1>
+		  <p1><span id="Sol Washers">31</span></p1>
+		  <p1><span id="Sol Dryers">11</span></p1>
 		  </td>
 	  <td>
-	  	  <p1>32</p1>
-		  <p1>12</p1>
+	  	  <p1><span id="Ellingson Washers">32</span></p1>
+		  <p1><span id="Ellingson Dryers">12</span></p1>
 	  	  </td>
 	  <td>
-		  <p1>33</p1>
-		  <p1>313</p1>
+		  <p1><span id="Peterson Washers">33</span></p1>
+		  <p1><span id="Peterson Dryers">13</span></p1>
 		  </td>
   </tr>
   <tr>
@@ -57,7 +57,7 @@
     	<form name="Buttons">
     	  <button  type="button" onclick="alert('Use Washing Machine')">Use Washer</button>
 		    <button  type="button" onclick="alert('Use Drying Machine')">Use Dryer</button>
-        <button  type="button" onclick="alert('Done With Washing Machine')">Done With Washer</button>
+        <button  type="button" onclick="addWasherGle">Done With Washer</button>
 		    <button  type="button" onclick="alert('Done With Drying Machine')">Done With Dryer</button>
     	</form>
       </td>
@@ -87,7 +87,15 @@
       </td>
   </tr>
   </table>
-  
+  <script type = "text/javascript">
+	  function addWasherGle(){
+		 var count = document.getElementByID('Gleason Washers').innerHTML;
+		 count++;
+		 document.getElementByID('Gleason Washers').innerHTML = count
+	  }
+	  
+	  
+	  </script>
   
 </body>
 </html>
