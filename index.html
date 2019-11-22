@@ -36,8 +36,8 @@
   </tr>
   <tr>
 	  <td>
-	  	  <p1><span id="Gleason Washers">30</span></p1>
-		  <p1><span id="Gleason Dryers">10</span></p1>
+	  	  <p1 id="Gleason Washers">30</p1>
+		  <p1 id="Gleason Dryers">10</p1>
 	  	  </td>
 	  <td>
 		  <p1><span id="Sol Washers">31</span></p1>
@@ -87,8 +87,9 @@
       </td>
   </tr>
   </table>
-  <script type = "text/javascript">
+  <script>
 	  function addWasherGle(){
+		 alert("11");
 		 var count = document.getElementByID('Gleason Washers').innerHTML;
 		 count++;
 		 document.getElementByID('Gleason Washers').innerHTML = count;
