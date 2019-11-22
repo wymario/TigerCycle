@@ -1,6 +1,13 @@
 <!doctype html>
 <html>
 <head>
+  <style>
+  table, th, td {
+  border: 3px solid orange;
+  border-collapse: collapse;
+  padding: 25px;
+}
+</style>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <title>Machines</title>
 </head>
@@ -20,6 +27,40 @@
 <body>
   <p1>This is the machines page</p1>
   <h2>What is happening</h2>
+  <table style="width:100%" style="color:Orange;">
+  <tr>
+    <th>Gleason</th>
+    <th>Sol</th> 
+    <th>Ellingson</th>
+    <th>Peterson</th>
+  </tr>
+  <tr>
+      <th>  
+    	<select name="Rooms">
+    	  <option value="Sol">Sol</option>
+    	  <option value="Gleason">Gleason</option>
+    	  <option value="Ellingson">Ellingson</option>
+    	  <option value="Peterson">Peterson</option>
+    	</select>
+      </th>
+      <td>    
+    	<form name="Buttons">
+    	  <button  type="button" onclick="alert('Use Washing Machine')">Use Washer</button>
+		    <button  type="button" onclick="alert('Use Drying Machine')">Use Washer</button>
+        <button  type="button" onclick="alert('Done With Washing Machine')">Use Washer</button>
+		    <button  type="button" onclick="alert('Done With Drying Machine')">Use Washer</button>
+    	</form>
+      </td>
+    <th>
+       User Review:<br>
+  	   <input type="paragraph" name="review" >
+  	    <br/>
+
+        
+    </th>
+  </tr>
+  </table>
+  
   
 </body>
 </html>
