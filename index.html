@@ -122,44 +122,76 @@
   </tr>
   </table>
   <script>
+	  var gleWashCount = 0
+	  var gleDryCount = 0
+	  var ellWashCount = 0
+	  var ellDryCount = 0
+	  var solWashCount = 0
+	  var solDryCount = 0
+	  var petWashCount = 0
+	  var petDryCount = 0
 	  function addWasherGle(){
 		 var count = document.getElementById('Gleason Washers').innerHTML;
 		 count++;
+		 gleWashCount++;
 		 document.getElementById('Gleason Washers').innerHTML = count;
 	  }	
 	  function addWasherSol(){
 		 var count = document.getElementById('Sol Washers').innerHTML;
 		 count++;
+		 solWashCount++;
 		 document.getElementById('Sol Washers').innerHTML = count;
 	  }
 	  function addWasherEll(){
 		 var count = document.getElementById('Ellingson Washers').innerHTML;
 		 count++;
+		 ellWashCount++;
 		 document.getElementById('Ellingson Washers').innerHTML = count;
 	  }
 	  function addWasherPet(){
 		 var count = document.getElementById('Peterson Washers').innerHTML;
 		 count++;
+		 petWashCount++;
 		 document.getElementById('Peterson Washers').innerHTML = count;
 	  }
 	  function removeWasherGle(){
+		 if gleWasherCount == 0{
+			alert("You cannot remove more washers than you are using")
+			 return
+		 }
 		 var count = document.getElementById('Gleason Washers').innerHTML;
 		 count--;
+		 gleWashCount--;
 		 document.getElementById('Gleason Washers').innerHTML = count;
 	  }
 	  function removeWasherSol(){
+		 if solWasherCount == 0{
+			alert("You cannot remove more washers than you are using")
+			 return
+		 }
 		 var count = document.getElementById('Sol Washers').innerHTML;
 		 count--;
+		 solWashCount--;
 		 document.getElementById('Sol Washers').innerHTML = count;
 	  }
 	  function removeWasherEll(){
+		 if ellWasherCount == 0{
+			alert("You cannot remove more washers than you are using")
+			 return
+		 }
 		 var count = document.getElementById('Ellingson Washers').innerHTML;
 		 count--;
+		 ellWashCount--;
 		 document.getElementById('Ellingson Washers').innerHTML = count;
 	  }
 	  function removeWasherPet(){
+		 if petWasherCount == 0{
+			alert("You cannot remove more washers than you are using")
+			 return
+		 }
 		 var count = document.getElementById('Peterson Washers').innerHTML;
 		 count--;
+		 petWashCount--;
 		 document.getElementById('Peterson Washers').innerHTML = count;
 	  }
 	  
@@ -169,41 +201,65 @@
 	  function addDryerGle(){
 		 var count = document.getElementById('Gleason Dryers').innerHTML;
 		 count++;
+		 gleDryCount++;
 		 document.getElementById('Gleason Dryers').innerHTML = count;
 	  }	
 	  function addDryerSol(){
 		 var count = document.getElementById('Sol Dryers').innerHTML;
 		 count++;
+		 solDryCount++;
 		 document.getElementById('Sol Dryers').innerHTML = count;
 	  }
 	  function addDryerEll(){
 		 var count = document.getElementById('Ellingson Dryers').innerHTML;
 		 count++;
+		 ellDryCount++;
 		 document.getElementById('Ellingson Dryers').innerHTML = count;
 	  }
 	  function addDryerPet(){
 		 var count = document.getElementById('Peterson Dryers').innerHTML;
 		 count++;
+		 petDryCount++;
 		 document.getElementById('Peterson Dryers').innerHTML = count;
 	  }
 	  function removeDryerGle(){
+		 if gleDryCount == 0{
+			alert("You cannot remove more dryers than you are using")
+			 return
+		 }
 		 var count = document.getElementById('Gleason Dryers').innerHTML;
 		 count--;
+		 gleDryCount--;
 		 document.getElementById('Gleason Dryers').innerHTML = count;
 	  }
 	  function removeDryerSol(){
+		 if solDryCount == 0{
+			alert("You cannot remove more dryers than you are using")
+			 return
+		 }
 		 var count = document.getElementById('Sol Dryers').innerHTML;
 		 count--;
+		 solDryCount--;
 		 document.getElementById('Sol Dryers').innerHTML = count;
 	  }
 	  function removeDryerEll(){
+		 if ellDryCount == 0{
+			alert("You cannot remove more dryers than you are using")
+			 return
+		 }
 		 var count = document.getElementById('Ellingson Dryers').innerHTML;
 		 count--;
+		 ellDryCount--;
 		 document.getElementById('Ellingson Dryers').innerHTML = count;
 	  }
 	  function removeDryerPet(){
+		 if petDryCount == 0{
+			alert("You cannot remove more dryers than you are using")
+			 return
+		 }
 		 var count = document.getElementById('Peterson Dryers').innerHTML;
 		 count--;
+		 petDryCount--;
 		 document.getElementById('Peterson Dryers').innerHTML = count;
 	  }
 	  		  
