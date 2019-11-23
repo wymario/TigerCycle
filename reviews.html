@@ -29,7 +29,8 @@
   <center>
   <h1> The Machine Reviews </h1>
   <br>
-  <p> Here, you can write reviews on the machines ability to either wash your clothes correctly or dry them right. </p>
+  <p> Here, you can write reviews on the machines ability to either wash your clothes correctly or dry them right. 
+  </p>
   <br>
   <table style="width:100%" style="color:Orange;">
   <tr>
@@ -44,23 +45,70 @@
     	  <option value="Gleason">Gleason</option>
     	  <option value="Ellingson">Ellingson</option>
     	  <option value="Peterson">Peterson</option>
+          <option value="ResHallA">Residence Hall A</option>
+          <option value="ResHallB">Residence Hall B</option>
+          <option value="ResHallC">Residence Hall C</option>
     	</select>
       </th>
       <td>    
     	<form name="Rooms">
-    	  <input type="radio" name="Washer" value="Washer">Washer<br>
-		  <input type="radio" name="Dryer" value="Dryer">Dryer<br>    	  
+    	  <input type="radio" name="WasherorDryer" value="Washer">Washer<br>
+		  <input type="radio" name="WasherorDryer" value="Dryer">Dryer<br>    	  
     	</form>
+        <br/><br/>
+        <select name="Washers">
+          <option value="--">--</option>
+    	  <option value="1">1</option>
+    	  <option value="2">2</option>
+    	  <option value="3">3</option>
+    	  <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+    	</select>
+        <select name="Dryers">
+          <option value="--">--</option>
+    	  <option value="A">A</option>
+    	  <option value="B">B</option>
+    	  <option value="C">C</option>
+    	  <option value="D">D</option>
+          <option value="E">E</option>
+          <option value="F">F</option>
+          <option value="G">G</option>
+          <option value="H">H</option>
+          <option value="I">I</option>
+          <option value="J">J</option>
+          
+    	</select>
       </td>
     <th>
-       User Review:<br>
-  	   <input type="paragraph" name="review" >
-  	    <br/>
-
-        
+       User Review:<br><br>
+  	   <textarea name="review" rows="5" cols="40">
+       </textarea>
+       <br>
+       <br>
+       <input type="submit" value="Submit">
+       <br/>
     </th>
   </tr>
   </table>
+  
+  <p>Here is the link for <a href="https://mylife.rit.edu/StarRezPortalX/42C25959/5/6/Home-Home">Maintenance Requests</a></p>
+  </center>
   
 </body>
 </html>
