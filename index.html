@@ -55,7 +55,7 @@
   <tr>
       <td>    
     	<form name="Buttons">
-    	  <button  type="button" onclick="removeWasherGle()">Use Washererereraaa</button>
+    	  <button  type="button" onclick="removeWasherGle()">Use Washerbbb</button>
 		    <button  type="button" onclick="removeDryerGle()">Use Dryer</button>
     	</form>
       </td>
@@ -131,64 +131,68 @@
 	  var petWashCount = 0;
 	  var petDryCount = 0;
 	  function addWasherGle(){
+		 if (gleWasherCount == 0){
+			alert("You cannot remove more washers than you are using")
+			 return
+		 }
 		 var count = document.getElementById('Gleason Washers').innerHTML;
 		 count++;
 		 gleWashCount--;
 		 document.getElementById('Gleason Washers').innerHTML = count;
 	  }	
 	  function addWasherSol(){
+		 if (solWasherCount == 0){
+			alert("You cannot remove more washers than you are using")
+			 return
+		 }
 		 var count = document.getElementById('Sol Washers').innerHTML;
 		 count++;
 		 solWashCount--;
 		 document.getElementById('Sol Washers').innerHTML = count;
 	  }
 	  function addWasherEll(){
+		 if (ellWasherCount == 0){
+			alert("You cannot remove more washers than you are using")
+			 return
+		 }
 		 var count = document.getElementById('Ellingson Washers').innerHTML;
 		 count++;
 		 ellWashCount--;
 		 document.getElementById('Ellingson Washers').innerHTML = count;
 	  }
 	  function addWasherPet(){
+		 if (petWasherCount == 0){
+			alert("You cannot remove more washers than you are using")
+			 return
+		 }
 		 var count = document.getElementById('Peterson Washers').innerHTML;
 		 count++;
 		 petWashCount--;
 		 document.getElementById('Peterson Washers').innerHTML = count;
 	  }
 	  function removeWasherGle(){
-		 if (gleWasherCount == 0){
-			alert("You cannot remove more washers than you are using")
-			 return
-		 }
+		
 		 var count = document.getElementById('Gleason Washers').innerHTML;
 		 count--;
 		 gleWashCount++;
 		 document.getElementById('Gleason Washers').innerHTML = count;
 	  }
 	  function removeWasherSol(){
-		 if (solWasherCount == 0){
-			alert("You cannot remove more washers than you are using")
-			 return
-		 }
+		 
 		 var count = document.getElementById('Sol Washers').innerHTML;
 		 count--;
 		 solWashCount++;
 		 document.getElementById('Sol Washers').innerHTML = count;
 	  }
 	  function removeWasherEll(){
-		 if (ellWasherCount == 0){
-			alert("You cannot remove more washers than you are using")
-			 return
-		 }
+		 
 		 var count = document.getElementById('Ellingson Washers').innerHTML;
 		 count--;
 		 ellWashCount++;
 		 document.getElementById('Ellingson Washers').innerHTML = count;
 	  }
 	  function removeWasherPet(){
-		 if (petWasherCount == 0){
-			alert("You cannot remove more washers than you are using")
-			 return
-		 }
+		 
 		 var count = document.getElementById('Peterson Washers').innerHTML;
 		 count--;
 		 petWashCount++;
