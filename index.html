@@ -131,7 +131,7 @@
 	  var petWashCount = 0;
 	  var petDryCount = 0;
 	  function addWasherGle(){
-		 if (gleWasherCount == 0){
+		 if (gleWashCount == 0){
 			alert("You cannot remove more washers than you are using")
 			 return
 		 }
@@ -139,10 +139,10 @@
 		 count++;
 		 alert(count)
 		 gleWashCount--;
-		 document.getElementById('Gleason Washers').innerHTML = count;
+		 document.getElementById('Gleason Washers').innerHTML = count; 
 	  }	
 	  function addWasherSol(){
-		 if (solWasherCount == 0){
+		 if (solWashCount == 0){
 			alert("You cannot remove more washers than you are using")
 			 return
 		 }
@@ -152,7 +152,7 @@
 		 document.getElementById('Sol Washers').innerHTML = count;
 	  }
 	  function addWasherEll(){
-		 if (ellWasherCount == 0){
+		 if (ellWashCount == 0){
 			alert("You cannot remove more washers than you are using")
 			 return
 		 }
@@ -162,7 +162,7 @@
 		 document.getElementById('Ellingson Washers').innerHTML = count;
 	  }
 	  function addWasherPet(){
-		 if (petWasherCount == 0){
+		 if (petWashCount == 0){
 			alert("You cannot remove more washers than you are using")
 			 return
 		 }
