@@ -53,7 +53,7 @@
   <tr>
       <td>    
     	<form name="Buttons">
-    	  <button  type="button" onclick="removeWasherGle()">Use Washer Local11</button>
+    	  <button  type="button" onclick="removeWasherGle()">Use Washer Local12</button>
 		    <button  type="button" onclick="removeDryerGle()">Use Dryer</button>
     	</form>
       </td>
@@ -141,7 +141,7 @@
 		 }
 		 var count = document.getElementById('Gleason Washers').innerHTML;
 		 count++;
-		 var current = parseInt(localStorage.getItem('gleWashCount');
+		 var current = parseInt(localStorage.getItem('gleWashCount'));
 		 current--;
 		 localStorage.setItem('gleWashCount', current);
 		 console.log(localStorage.getItem('gleWashCount'));
