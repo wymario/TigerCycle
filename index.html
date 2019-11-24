@@ -55,7 +55,7 @@
   <tr>
       <td>    
     	<form name="Buttons">
-    	  <button  type="button" onclick="removeWasherGle()">Use Washer Local1</button>
+    	  <button  type="button" onclick="removeWasherGle()">Use Washer Local2</button>
 		    <button  type="button" onclick="removeDryerGle()">Use Dryer</button>
     	</form>
       </td>
@@ -132,6 +132,7 @@
 	  var petDryCount = 0;
 	  
 	  localStorage.setItem('gleWashCount', JSON.stringify(gleWashCount))
+	  console.log(localStorage.getItem('gleWashCount'))
 	  localStorage.setItem('ellWashCount', ellWashCount)
 	  localStorage.setItem('solWashCount', solWashCount)
 	  localStorage.setItem('petWashCount', petWashCount)
