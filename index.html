@@ -55,7 +55,7 @@
   <tr>
       <td>    
     	<form name="Buttons">
-    	  <button  type="button" onclick="removeWasherGle()">Use Washerererer</button>
+    	  <button  type="button" onclick="removeWasherGle()">Use Washererereraaa</button>
 		    <button  type="button" onclick="removeDryerGle()">Use Dryer</button>
     	</form>
       </td>
@@ -199,64 +199,68 @@
 	  
 	  
 	  function addDryerGle(){
+		 if (gleDryCount == 0){
+			alert("You cannot remove more dryers than you are using")
+			 return
+		 }
 		 var count = document.getElementById('Gleason Dryers').innerHTML;
 		 count++;
 		 gleDryCount--;
 		 document.getElementById('Gleason Dryers').innerHTML = count;
 	  }	
 	  function addDryerSol(){
+		 if (solDryCount == 0){
+			alert("You cannot remove more dryers than you are using")
+			 return
+		 }
 		 var count = document.getElementById('Sol Dryers').innerHTML;
 		 count++;
 		 solDryCount--;
 		 document.getElementById('Sol Dryers').innerHTML = count;
 	  }
 	  function addDryerEll(){
+		 if (ellDryCount == 0){
+			alert("You cannot remove more dryers than you are using")
+			 return
+		 }
 		 var count = document.getElementById('Ellingson Dryers').innerHTML;
 		 count++;
 		 ellDryCount--;
 		 document.getElementById('Ellingson Dryers').innerHTML = count;
 	  }
 	  function addDryerPet(){
+		 if (petDryCount == 0){
+			alert("You cannot remove more dryers than you are using")
+			 return
+		 }
 		 var count = document.getElementById('Peterson Dryers').innerHTML;
 		 count++;
 		 petDryCount--;
 		 document.getElementById('Peterson Dryers').innerHTML = count;
 	  }
 	  function removeDryerGle(){
-		 if (gleDryCount == 0){
-			alert("You cannot remove more dryers than you are using")
-			 return
-		 }
+		 
 		 var count = document.getElementById('Gleason Dryers').innerHTML;
 		 count--;
 		 gleDryCount++;
 		 document.getElementById('Gleason Dryers').innerHTML = count;
 	  }
 	  function removeDryerSol(){
-		 if (solDryCount == 0){
-			alert("You cannot remove more dryers than you are using")
-			 return
-		 }
+		 
 		 var count = document.getElementById('Sol Dryers').innerHTML;
 		 count--;
 		 solDryCount++;
 		 document.getElementById('Sol Dryers').innerHTML = count;
 	  }
 	  function removeDryerEll(){
-		 if (ellDryCount == 0){
-			alert("You cannot remove more dryers than you are using")
-			 return
-		 }
+		 
 		 var count = document.getElementById('Ellingson Dryers').innerHTML;
 		 count--;
 		 ellDryCount++;
 		 document.getElementById('Ellingson Dryers').innerHTML = count;
 	  }
 	  function removeDryerPet(){
-		 if (petDryCount == 0){
-			alert("You cannot remove more dryers than you are using")
-			 return
-		 }
+		 
 		 var count = document.getElementById('Peterson Dryers').innerHTML;
 		 count--;
 		 petDryCount++;
