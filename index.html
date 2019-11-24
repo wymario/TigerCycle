@@ -55,7 +55,7 @@
   <tr>
       <td>    
     	<form name="Buttons">
-    	  <button  type="button" onclick="removeWasherGle()">Use Washer</button>
+    	  <button  type="button" onclick="removeWasherGle()">Use Washer Local</button>
 		    <button  type="button" onclick="removeDryerGle()">Use Dryer</button>
     	</form>
       </td>
@@ -130,14 +130,25 @@
 	  var solDryCount = 0;
 	  var petWashCount = 0;
 	  var petDryCount = 0;
+	  
+	  localStorage.setItem('gleWashCount', gleWashCount)
+	  localStorage.setItem('ellWashCount', gleWashCount)
+	  localStorage.setItem('solWashCount', gleWashCount)
+	  localStorage.setItem('petWashCount', gleWashCount)
+	  localStorage.setItem('gleDryCount', gleWashCount)
+	  localStorage.setItem('ellDryCount', gleWashCount)
+	  localStorage.setItem('solDryCount', gleWashCount)
+	  localStorage.setItem('petDryCount', gleWashCount)
+
+
 	  function addWasherGle(){
-		 if (gleWashCount == 0){
+		 if (localStorage.getItem('gleWashCount') == 0){
 			alert("You cannot remove more washers than you are using")
 			 return
 		 }
 		 var count = document.getElementById('Gleason Washers').innerHTML;
 		 count++;
-		 gleWashCount--;
+		 localStorage.setItem('gleWashCount', gleWashCount--);
 		 document.getElementById('Gleason Washers').innerHTML = count; 
 	  }	
 	  function addWasherSol(){
