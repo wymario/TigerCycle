@@ -55,7 +55,7 @@
   <tr>
       <td>    
     	<form name="Buttons">
-    	  <button  type="button" onclick="removeWasherGle()">Use Washer Local</button>
+    	  <button  type="button" onclick="removeWasherGle()">Use Washer Local1</button>
 		    <button  type="button" onclick="removeDryerGle()">Use Dryer</button>
     	</form>
       </td>
@@ -131,14 +131,14 @@
 	  var petWashCount = 0;
 	  var petDryCount = 0;
 	  
-	  localStorage.setItem('gleWashCount', gleWashCount)
-	  localStorage.setItem('ellWashCount', gleWashCount)
-	  localStorage.setItem('solWashCount', gleWashCount)
-	  localStorage.setItem('petWashCount', gleWashCount)
-	  localStorage.setItem('gleDryCount', gleWashCount)
-	  localStorage.setItem('ellDryCount', gleWashCount)
-	  localStorage.setItem('solDryCount', gleWashCount)
-	  localStorage.setItem('petDryCount', gleWashCount)
+	  localStorage.setItem('gleWashCount', JSON.stringify(gleWashCount))
+	  localStorage.setItem('ellWashCount', ellWashCount)
+	  localStorage.setItem('solWashCount', solWashCount)
+	  localStorage.setItem('petWashCount', petWashCount)
+	  localStorage.setItem('gleDryCount', gleDryCount)
+	  localStorage.setItem('ellDryCount', ellDryCount)
+	  localStorage.setItem('solDryCount', solDryCount)
+	  localStorage.setItem('petDryCount', petDryCount)
 
 
 	  function addWasherGle(){
@@ -148,7 +148,7 @@
 		 }
 		 var count = document.getElementById('Gleason Washers').innerHTML;
 		 count++;
-		 localStorage.setItem('gleWashCount', gleWashCount--);
+		 localStorage.setItem('gleWashCount', JSON.stringify(gleWashCount--));
 		 document.getElementById('Gleason Washers').innerHTML = count; 
 	  }	
 	  function addWasherSol(){
