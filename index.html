@@ -1,6 +1,13 @@
 <!doctype html>
 <html>
 <head>
+  <style>
+  table, th, td {
+  border: 3px solid orange;
+  border-collapse: collapse;
+  padding: 25px;
+}
+</style>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <title>Machines</title>
 </head>
@@ -20,6 +27,254 @@
 <body>
   <p1>This is the machines page</p1>
   <h2>What is happening</h2>
+  <table style="width:100%" style="color:Orange;">
+  <tr>
+    <th>Gleason</th>
+    <th>Sol</th> 
+    <th>Ellingson</th>
+    <th>Peterson</th>
+  </tr>
+  <tr>
+	  <td>
+	  	  <p1 id="Gleason Washers">30</p1>
+		  <p1 id="Gleason Dryers">10</p1>
+	  	  </td>
+	  <td>
+		  <p1><span id="Sol Washers">31</span></p1>
+		  <p1><span id="Sol Dryers">11</span></p1>
+		  </td>
+	  <td>
+	  	  <p1><span id="Ellingson Washers">32</span></p1>
+		  <p1><span id="Ellingson Dryers">12</span></p1>
+	  	  </td>
+	  <td>
+		  <p1><span id="Peterson Washers">33</span></p1>
+		  <p1><span id="Peterson Dryers">13</span></p1>
+		  </td>
+  </tr>
+  <tr>
+      <td>    
+    	<form name="Buttons">
+    	  <button  type="button" onclick="removeWasherGle()">Use Washer Local5</button>
+		    <button  type="button" onclick="removeDryerGle()">Use Dryer</button>
+    	</form>
+      </td>
+	  <td>    
+    	<form name="Buttons">
+    	  <button  type="button" onclick="removeWasherSol()">Use Washer</button>
+		    <button  type="button" onclick="removeDryerSol()">Use Dryer</button>
+    	</form>
+      </td>
+	  <td>    
+    	<form name="Buttons">
+    	  <button  type="button" onclick="removeWasherEll()">Use Washer</button>
+		    <button  type="button" onclick="removeDryerEll()">Use Dryer</button>
+    	</form>
+      </td>
+      <td>    
+    	<form name="Buttons">
+    	  <button  type="button" onclick="removeWasherPet()">Use Washer</button>
+		    <button  type="button" onclick="removeDryerPet()">Use Dryer</button>
+    	</form>
+      </td>
+  </tr>
+  <tr>
+	  <td>
+		  <button  type="button" onclick="addWasherGle()">Done With Washer</button>
+		  </td>
+	  
+	  
+	  <td>
+	          <button  type="button" onclick="addWasherSol()">Done With Washer</button>
+		  </td>
+	  
+	  
+	  <td>
+	          <button  type="button" onclick="addWasherEll()">Done With Washer</button>
+		  </td>
+	  
+	  
+	  <td>
+                  <button  type="button" onclick="addWasherPet()">Done With Washer</button>
+		  </td>
+	 
+  </tr>
+  <tr>
+	  <td>
+	  	  <button  type="button" onclick="addDryerGle()">Done With Dryer</button> 
+		  </td>
+	  
+	  
+	  <td>
+	  	  <button  type="button" onclick="addDryerSol()">Done With Dryer</button>
+		  </td>
+	  
+	  
+	  <td>
+		  <button  type="button" onclick="addDryerEll()">Done With Dryer</button>
+		  </td>
+	  
+	  
+	  <td>
+		  <button  type="button" onclick="addDryerPet()">Done With Dryer</button>
+		  </td>
+	 
+  </tr>
+  </table>
+  <script>
+	  var gleWashCount = 0;
+	  var gleDryCount = 0;
+	  var ellWashCount = 0;
+	  var ellDryCount = 0;
+	  var solWashCount = 0;
+	  var solDryCount = 0;
+	  var petWashCount = 0;
+	  var petDryCount = 0;
+	 
+
+
+	  function addWasherGle(){
+		 if (gleWashCount == 0){
+			alert("You cannot remove more washers than you are using");
+			 return
+		 }
+		 var count = document.getElementById('Gleason Washers').innerHTML;
+		 count++;
+		 gleWashCount--;
+		 document.getElementById('Gleason Washers').innerHTML = count; 
+	  }	
+	  function addWasherSol(){
+		 if (solWashCount == 0){
+			alert("You cannot remove more washers than you are using")
+			 return
+		 }
+		 var count = document.getElementById('Sol Washers').innerHTML;
+		 count++;
+		 solWashCount--;
+		 document.getElementById('Sol Washers').innerHTML = count;
+	  }
+	  function addWasherEll(){
+		 if (ellWashCount == 0){
+			alert("You cannot remove more washers than you are using")
+			 return
+		 }
+		 var count = document.getElementById('Ellingson Washers').innerHTML;
+		 count++;
+		 ellWashCount--;
+		 document.getElementById('Ellingson Washers').innerHTML = count;
+	  }
+	  function addWasherPet(){
+		 if (petWashCount == 0){
+			alert("You cannot remove more washers than you are using")
+			 return
+		 }
+		 var count = document.getElementById('Peterson Washers').innerHTML;
+		 count++;
+		 petWashCount--;
+		 document.getElementById('Peterson Washers').innerHTML = count;
+	  }
+	  function removeWasherGle(){
+		
+		 var count = document.getElementById('Gleason Washers').innerHTML;
+		 count--;
+		 localStorage.setItem('gleWashCount', JSON.stringify(gleWashCount++));
+		 document.getElementById('Gleason Washers').innerHTML = count;
+	  }
+	  function removeWasherSol(){
+		 
+		 var count = document.getElementById('Sol Washers').innerHTML;
+		 count--;
+		 solWashCount++;
+		 document.getElementById('Sol Washers').innerHTML = count;
+	  }
+	  function removeWasherEll(){
+		 
+		 var count = document.getElementById('Ellingson Washers').innerHTML;
+		 count--;
+		 ellWashCount++;
+		 document.getElementById('Ellingson Washers').innerHTML = count;
+	  }
+	  function removeWasherPet(){
+		 
+		 var count = document.getElementById('Peterson Washers').innerHTML;
+		 count--;
+		 petWashCount++;
+		 document.getElementById('Peterson Washers').innerHTML = count;
+	  }
+	  
+	  
+	  
+	  
+	  function addDryerGle(){
+		 if (gleDryCount == 0){
+			alert("You cannot remove more dryers than you are using")
+			 return
+		 }
+		 var count = document.getElementById('Gleason Dryers').innerHTML;
+		 count++;
+		 gleDryCount--;
+		 document.getElementById('Gleason Dryers').innerHTML = count;
+	  }	
+	  function addDryerSol(){
+		 if (solDryCount == 0){
+			alert("You cannot remove more dryers than you are using")
+			 return
+		 }
+		 var count = document.getElementById('Sol Dryers').innerHTML;
+		 count++;
+		 solDryCount--;
+		 document.getElementById('Sol Dryers').innerHTML = count;
+	  }
+	  function addDryerEll(){
+		 if (ellDryCount == 0){
+			alert("You cannot remove more dryers than you are using")
+			 return
+		 }
+		 var count = document.getElementById('Ellingson Dryers').innerHTML;
+		 count++;
+		 ellDryCount--;
+		 document.getElementById('Ellingson Dryers').innerHTML = count;
+	  }
+	  function addDryerPet(){
+		 if (petDryCount == 0){
+			alert("You cannot remove more dryers than you are using")
+			 return
+		 }
+		 var count = document.getElementById('Peterson Dryers').innerHTML;
+		 count++;
+		 petDryCount--;
+		 document.getElementById('Peterson Dryers').innerHTML = count;
+	  }
+	  function removeDryerGle(){
+		 
+		 var count = document.getElementById('Gleason Dryers').innerHTML;
+		 count--;
+		 gleDryCount++;
+		 document.getElementById('Gleason Dryers').innerHTML = count;
+	  }
+	  function removeDryerSol(){
+		 
+		 var count = document.getElementById('Sol Dryers').innerHTML;
+		 count--;
+		 solDryCount++;
+		 document.getElementById('Sol Dryers').innerHTML = count;
+	  }
+	  function removeDryerEll(){
+		 
+		 var count = document.getElementById('Ellingson Dryers').innerHTML;
+		 count--;
+		 ellDryCount++;
+		 document.getElementById('Ellingson Dryers').innerHTML = count;
+	  }
+	  function removeDryerPet(){
+		 
+		 var count = document.getElementById('Peterson Dryers').innerHTML;
+		 count--;
+		 petDryCount++;
+		 document.getElementById('Peterson Dryers').innerHTML = count;
+	  }
+	  		  
+  </script>
   
 </body>
 </html>
