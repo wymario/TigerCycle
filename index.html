@@ -53,7 +53,7 @@
   <tr>
       <td>    
     	<form name="Buttons">
-    	  <button  type="button" onclick="removeWasherGle()">Use Washer</button>
+    	  <button  type="button" onclick="removeWasherGle()">Use Washer!</button>
 		    <button  type="button" onclick="removeDryerGle()">Use Dryer</button>
     	</form>
       </td>
@@ -132,19 +132,14 @@
 	  localStorage.setItem('gleWashCount', gleWashCount)
 	  localStorage.setItem('gleDryCount', gleDryCount)
 
-
-
 	  function addWasherGle(){
-		 if (localStorage.getItem('gleWashCount') == 0){
+		 if (gleWashCount == 0){
 			alert("You cannot remove more washers than you are using");
-			 return
+			return
 		 }
 		 var count = document.getElementById('Gleason Washers').innerHTML;
 		 count++;
-		 var current = parseInt(localStorage.getItem('gleWashCount'));
-		 current--;
-		 localStorage.setItem('gleWashCount', current);
-		 console.log(localStorage.getItem('gleWashCount'));
+		 gleWashCount--;
 		 document.getElementById('Gleason Washers').innerHTML = count; 
 	  }	
 	  function addWasherSol(){
@@ -180,16 +175,21 @@
 	  function removeWasherGle(){
 		
 		 var count = document.getElementById('Gleason Washers').innerHTML;
+		 if (count == 0){
+		 	alert("All washers are being used")
+			return
+		 }
 		 count--;
-		 var current = parseInt(localStorage.getItem('gleWashCount'));
-		 current++;
-		 localStorage.setItem('gleWashCount', current);
-		 console.log(localStorage.getItem('gleWashCount'));
+		 gleWashCount++;
 		 document.getElementById('Gleason Washers').innerHTML = count;
 	  }
 	  function removeWasherSol(){
 		 
 		 var count = document.getElementById('Sol Washers').innerHTML;
+		 if (count == 0){
+		 	alert("All washers are being used")
+			return
+		 }
 		 count--;
 		 solWashCount++;
 		 document.getElementById('Sol Washers').innerHTML = count;
@@ -197,6 +197,10 @@
 	  function removeWasherEll(){
 		 
 		 var count = document.getElementById('Ellingson Washers').innerHTML;
+		 if (count == 0){
+		 	alert("All washers are being used")
+			return
+		 }
 		 count--;
 		 ellWashCount++;
 		 document.getElementById('Ellingson Washers').innerHTML = count;
@@ -204,6 +208,10 @@
 	  function removeWasherPet(){
 		 
 		 var count = document.getElementById('Peterson Washers').innerHTML;
+		 if (count == 0){
+		 	alert("All washers are being used")
+			return
+		 }
 		 count--;
 		 petWashCount++;
 		 document.getElementById('Peterson Washers').innerHTML = count;
@@ -255,27 +263,41 @@
 	  function removeDryerGle(){
 		 
 		 var count = document.getElementById('Gleason Dryers').innerHTML;
+		 if (count == 0){
+		 	alert("All dryers are being used")
+			return
+		 }
 		 count--;
 		 gleDryCount++;
 		 document.getElementById('Gleason Dryers').innerHTML = count;
 	  }
 	  function removeDryerSol(){
-		 
+		
 		 var count = document.getElementById('Sol Dryers').innerHTML;
+		 if (count == 0){
+		 	alert("All dryers are being used")
+			return
+		 }
 		 count--;
 		 solDryCount++;
 		 document.getElementById('Sol Dryers').innerHTML = count;
 	  }
 	  function removeDryerEll(){
-		 
 		 var count = document.getElementById('Ellingson Dryers').innerHTML;
+		 if (count == 0){
+		 	alert("All dryers are being used")
+			return
+		 }
 		 count--;
 		 ellDryCount++;
 		 document.getElementById('Ellingson Dryers').innerHTML = count;
 	  }
 	  function removeDryerPet(){
-		 
 		 var count = document.getElementById('Peterson Dryers').innerHTML;
+		 if (count == 0){
+		 	alert("All dryers are being used")
+			return
+		 }
 		 count--;
 		 petDryCount++;
 		 document.getElementById('Peterson Dryers').innerHTML = count;
