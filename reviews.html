@@ -103,7 +103,7 @@
        <br>
 <a href="https://wymario.github.io/TigerCycle/thankyou.html">
        <input type="submit" value="Submit">
-	<button  type="button" onclick="post_review()">Use Washer</button>
+       <button  type="button" onclick="post_review()">Submit</button>
 	    </a>
        <br/>
     </th>
@@ -116,7 +116,8 @@
   
  <script>
 	function post_review(){
-	
+		var review = document.getElementById('text_input').innerHTML;
+		document.getElemendById('review_section') = review
 	}
  </script>
 	
