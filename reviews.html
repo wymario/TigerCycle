@@ -106,7 +106,7 @@
 	    </a>
        <br/>
        <br>
-       <button  type="button" onclick="post_review()">Submit Review</button>
+       <button  type="button" onclick="post_review()">Submit</button>
        </br>
     </th>
   </tr>
@@ -118,7 +118,7 @@
   
  <script>
 	function post_review(){
-		var review = document.getElementById('text_input').innerHTML;
+		var review = document.getElementById('text_input').value;
 		alert(review);
 		document.getElemendById('review_section').innerHTML = review;
 	}
